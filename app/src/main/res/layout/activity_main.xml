@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLaps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLap"
+        tools:listitem="@layout/item_lap" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:text="@string/btn_start"
+        android:textAllCaps="false"
+        android:textColor="@color/start_text"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnLap" />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:fontFamily="@font/font_sf_pro_text"
+        android:src="@drawable/bg_start"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRight"
+        app:layout_constraintEnd_toEndOf="@+id/btnRight"
+        app:layout_constraintStart_toStartOf="@+id/btnRight"
+        app:layout_constraintTop_toTopOf="@+id/btnRight" />
+
+    <Button
+        android:id="@+id/btnLap"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/font_sf_pro_text"
+        android:text="@string/btn_reset"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:src="@drawable/bg_left"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLap"
+        app:layout_constraintEnd_toEndOf="@+id/btnLap"
+        app:layout_constraintStart_toStartOf="@+id/btnLap"
+        app:layout_constraintTop_toTopOf="@+id/btnLap" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="@string/display_stopwatch"
+        android:textColor="@color/white"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
