@@ -19,7 +19,7 @@ This is a stopwatch app for Android that provides basic timing functionality, si
 - Android Studio 4.0 or later
 - Android SDK 21 or later
 ## Installation
-1. Clone the repository: git clone https://github.com/your_username/your_project_name.git
+1. Clone the repository: git clone https://github.com/MaxTokarev/HelixoStopwatch
 2. Open the project in Android Studio.
 3. Build and run the app on an emulator or a physical device.
 
